@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PostsList from './pages/PostsList';
 import AboutUs from './pages/AboutUs';
 import HomePage from './pages/HomePage';
+import DefaultLayout from './layouts/DefaultLayout';
 
 function App() {
   return (
