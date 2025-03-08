@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const PostsList = () => {
     const [posts, setPosts] = useState([]);
@@ -25,8 +26,14 @@ const PostsList = () => {
                             <div className='col-4' key={id}>
                                 <div className='card'>
                                     <div className='card-body'>
+
                                         <h5 className='card-title'>{title}</h5>
                                         <p className='card-text'>{tags}</p>
+
+                                        <Link to={"/lista-dei-post/" + id}>
+                                            <button>Apri</button>
+                                        </Link>
+
                                     </div>
                                 </div>
                             </div>
