@@ -16,16 +16,18 @@ const PostsList = () => {
     return (
         <>
             <h1>Lista dei post</h1>
-            <div>
-                <div>
+            <div className='container'>
+                <div className='row'>
                     {posts.map((elem) => {
                         const { id, title, tags } = elem;
 
                         return (
-                            <div key={id}>
-                                <div>
-                                    <h5>{title}</h5>
-                                    <p>{tags}</p>
+                            <div className='col-4' key={id}>
+                                <div className='card'>
+                                    <div className='card-body'>
+                                        <h5 className='card-title'>{title}</h5>
+                                        <p className='card-text'>{tags}</p>
+                                    </div>
                                 </div>
                             </div>
                         )
